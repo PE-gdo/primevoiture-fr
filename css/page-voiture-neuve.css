@@ -406,16 +406,6 @@
   font-size: 15px;
 }
 .vn-pro-cta:hover { background: var(--blue-dark); color: #FFFFFF; }
-.vn-pro-cta-outline {
-  align-self: start;
-  margin-top: auto;
-  border: 1.5px solid var(--navy);
-  padding: 11px 20px;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 15px;
-}
-.vn-pro-cta-outline:hover { background: var(--navy); color: #FFFFFF; }
 
 /* Aide locale box */
 .vn-locale-box {
