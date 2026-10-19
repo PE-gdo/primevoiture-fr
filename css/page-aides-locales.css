@@ -208,6 +208,15 @@
   gap: 16px;
   align-items: center;
 }
+
+@media (max-width: 420px) {
+  .al-bareme-wrap { padding: 4px 12px; }
+  .al-bareme { min-width: 0; }
+  .al-bareme-head, .al-bareme-row { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 6px; }
+  .al-bareme-head span, .al-bareme-row span { overflow-wrap: break-word; }
+  .al-bareme-row { font-size: 13px; }
+  .al-bareme-row .al-n, .al-bareme-row .al-o { font-size: 15px; }
+}
 .al-bareme-head {
   padding: 12px 0;
   font-size: 12px;
@@ -224,20 +233,6 @@
 
 .al-fiche-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 20px; margin-top: 16px; }
 .al-fiche-foot a { font-size: 15px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
-
-/* Ile-de-France block */
-.al-idf-card { background: var(--bg-gray); border-radius: 20px; padding: 24px; }
-.al-idf-tag { display: inline-block; background: #D9CCFF; border-radius: 999px; padding: 3px 12px; font-size: 13px; font-weight: 600; margin-bottom: 10px; }
-.al-idf-card h3 { font-weight: 700; font-size: 20px; margin: 0 0 8px; }
-.al-idf-card > p { font-size: 15px; line-height: 1.6; color: var(--navy-light); margin: 0 0 18px; }
-.al-idf-amounts { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin-bottom: 18px; }
-.al-idf-amount { background: #FFFFFF; border-radius: 14px; padding: 16px; }
-.al-idf-amount .amt { font-family: 'Schibsted Grotesk'; font-weight: 800; font-size: 26px; letter-spacing: -0.02em; }
-.al-idf-amount .amt .up-to { font-size: 0.55em; font-weight: 600; letter-spacing: 0; }
-.al-idf-amount .cap { font-size: 14px; color: var(--navy-light); margin-top: 2px; }
-.al-idf-list { margin: 0 0 16px; padding-left: 18px; font-size: 15px; line-height: 1.65; color: var(--navy-light); display: grid; gap: 4px; }
-.al-idf-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 20px; }
-.al-idf-foot a { font-size: 15px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 
 /* Autres collectivites (dark card) */
 .al-dark-card { background: var(--navy); color: #FFFFFF; border-radius: 22px; padding: clamp(24px, 3.5vw, 36px); }
