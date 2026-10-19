@@ -6,7 +6,7 @@
   // reads/writes the same localStorage key and mirrors the same GA load/deny behavior.
   const STORAGE_KEY = "pv-cookie-consent";
   const MAX_AGE_MS = 182 * 24 * 60 * 60 * 1000;
-  const GA_ID = "G-XXXXXXXXXX";
+  const GA_ID = "G-4Y4YN1XBNR";
 
   const toggle = document.getElementById("legalCookieToggle");
   const toggleLabel = document.getElementById("legalCookieToggleLabel");

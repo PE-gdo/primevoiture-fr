@@ -58,7 +58,7 @@
   // --- Cookie consent banner ---
   const STORAGE_KEY = "pv-cookie-consent";
   const MAX_AGE_MS = 182 * 24 * 60 * 60 * 1000;
-  const GA_ID = "G-XXXXXXXXXX";
+  const GA_ID = "G-4Y4YN1XBNR";
 
   const banner = document.getElementById("cookieBanner");
   const details = document.getElementById("cookieDetails");
