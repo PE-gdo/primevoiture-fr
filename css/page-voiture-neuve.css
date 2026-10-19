@@ -558,6 +558,7 @@
 .vn-step-c6 { background: #A9C7FF; }
 
 @media (max-width: 640px) {
+  .vn-article { gap: 40px; }
   .vn-layout { padding: 48px 24px 24px; }
 
   .vn-locale-box {

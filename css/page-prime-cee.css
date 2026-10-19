@@ -269,5 +269,6 @@
 .cee-step-cta { margin-top: 12px; }
 
 @media (max-width: 640px) {
+  .cee-article { gap: 40px; }
   .cee-hero-visual { max-width: 320px; }
 }

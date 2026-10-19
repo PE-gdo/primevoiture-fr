@@ -327,5 +327,8 @@
 .ent-reassurance { margin-top: 56px; }
 
 @media (max-width: 640px) {
+  .ent-article { gap: 40px; }
   .ent-layout { padding: 48px 24px 24px; gap: 32px; }
+  .ent-example-row { flex-direction: column; align-items: flex-start; }
+  .ent-example-arrow { align-self: center; transform: rotate(90deg); }
 }

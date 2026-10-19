@@ -335,6 +335,7 @@
 .util-step p { margin: 0; padding: 9px 0 28px; font-size: 17px; line-height: 1.6; text-wrap: pretty; }
 
 @media (max-width: 640px) {
+  .util-article { gap: 40px; }
   .util-locale-banner {
     grid-template-columns: 1fr;
     justify-items: center;

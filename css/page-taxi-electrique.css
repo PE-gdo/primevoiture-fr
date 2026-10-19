@@ -312,6 +312,7 @@
 .taxi-step-body { margin: 0; padding: 9px 0 28px; font-size: 17px; line-height: 1.6; text-wrap: pretty; }
 
 @media (max-width: 640px) {
+  .taxi-article { gap: 40px; }
   .taxi-hero-visual { max-width: 320px; }
 
   .taxi-locale-banner {

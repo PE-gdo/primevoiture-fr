@@ -293,6 +293,7 @@
   .vo-toc { position: static; max-width: none; }
 }
 @media (max-width: 640px) {
+  .vo-article { gap: 40px; }
   .vo-layout { gap: 32px; }
 
   .vo-locale-box {
