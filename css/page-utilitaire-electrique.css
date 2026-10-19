@@ -333,3 +333,16 @@
 .util-step-line { flex: 1; width: 2px; background: var(--border); min-height: 20px; }
 .util-step-line-none { opacity: 0; }
 .util-step p { margin: 0; padding: 9px 0 28px; font-size: 17px; line-height: 1.6; text-wrap: pretty; }
+
+@media (max-width: 640px) {
+  .util-locale-banner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+  .util-locale-banner img {
+    order: -1;
+    width: min(200px, 55%);
+  }
+  .util-locale-banner-links { justify-content: center; }
+}

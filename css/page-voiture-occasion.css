@@ -294,4 +294,14 @@
 }
 @media (max-width: 640px) {
   .vo-layout { gap: 32px; }
+
+  .vo-locale-box {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+  .vo-locale-box img {
+    order: -1;
+    width: min(200px, 55%);
+  }
 }

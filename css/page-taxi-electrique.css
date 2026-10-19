@@ -313,4 +313,15 @@
 
 @media (max-width: 640px) {
   .taxi-hero-visual { max-width: 320px; }
+
+  .taxi-locale-banner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+  .taxi-locale-banner img {
+    order: -1;
+    width: min(200px, 55%);
+  }
+  .taxi-locale-links { justify-content: center; }
 }
