@@ -1,0 +1,359 @@
+/* Leasing social — page-specific components (prefixed .leasing-) */
+
+/* Header / hero */
+.leasing-hero-section {
+  background: var(--bg-gray);
+  padding: 28px 24px 64px;
+}
+
+.leasing-breadcrumb {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  color: var(--navy-muted);
+  margin-bottom: 36px;
+}
+.leasing-breadcrumb a { color: var(--navy-muted); text-decoration: underline; text-underline-offset: 3px; }
+.leasing-breadcrumb .current { color: var(--navy); font-weight: 600; }
+
+.leasing-hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+  gap: 48px;
+  align-items: center;
+}
+
+.leasing-hero-grid h1 {
+  font-weight: 800;
+  font-size: clamp(34px, 4.2vw, 54px);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  margin: 0 0 22px;
+  text-wrap: balance;
+}
+
+.leasing-hero-grid .leasing-lead {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--navy-light);
+  max-width: 600px;
+  margin: 0 0 30px;
+  text-wrap: pretty;
+}
+
+.leasing-collage-wrap { display: flex; justify-content: center; align-items: center; }
+
+.leasing-collage {
+  position: relative;
+  width: min(100%, 466px);
+  aspect-ratio: 1;
+}
+.leasing-collage .blob-bg {
+  position: absolute; left: 11%; top: 13%; width: 84%; aspect-ratio: 1;
+  border-radius: 50%; background: #FFE1D3;
+}
+.leasing-collage .photo {
+  position: absolute; left: 4%; top: 4%; width: 80%; aspect-ratio: 1;
+  border-radius: 50%; overflow: hidden; background: var(--pastel-blue);
+}
+.leasing-collage .photo img {
+  width: 100%; height: 100%; object-fit: cover; object-position: 62% 50%; display: block;
+}
+.leasing-collage .dot1 {
+  position: absolute; left: -1%; top: -3%; width: 8%; aspect-ratio: 1;
+  border-radius: 50%; background: var(--pastel-green); opacity: .85;
+}
+.leasing-collage .dot2 {
+  position: absolute; left: 83%; top: 7%; width: 13%; aspect-ratio: 1;
+  border-radius: 50%; background: var(--pastel-yellow); opacity: .9;
+}
+.leasing-collage .dot3 {
+  position: absolute; left: 13%; top: 1%; width: 16%; aspect-ratio: 1;
+  border-radius: 50%; background: var(--pastel-blue); opacity: .85;
+}
+
+/* Two-column article layout with sticky TOC */
+.leasing-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 24px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 56px;
+  align-items: start;
+}
+
+.leasing-toc { position: sticky; top: 96px; max-width: 260px; }
+@media (max-width: 900px) {
+  .leasing-toc { position: static; max-width: none; }
+}
+.leasing-toc-label {
+  font-size: 13px; font-weight: 600; color: var(--navy-muted);
+  text-transform: uppercase; letter-spacing: .05em; margin-bottom: 14px;
+}
+.leasing-toc nav { display: flex; flex-direction: column; border-left: 2px solid var(--border); }
+.leasing-toc nav a { padding: 8px 0 8px 16px; font-size: 15px; line-height: 1.35; color: var(--navy-light); }
+.leasing-toc nav a:hover { color: var(--navy); }
+
+.leasing-article {
+  grid-column: span 3;
+  min-width: 0;
+  max-width: 820px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+.leasing-article section { scroll-margin-top: 96px; }
+.leasing-article h2 {
+  font-weight: 700;
+  font-size: clamp(26px, 2.8vw, 34px);
+  letter-spacing: -0.02em;
+  margin: 0 0 18px;
+}
+.leasing-article .leasing-lead {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--navy-light);
+  margin: 0 0 22px;
+  text-wrap: pretty;
+}
+
+/* Callout boxes */
+.leasing-box {
+  font-size: 16px;
+  line-height: 1.65;
+  margin: 0 0 14px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  text-wrap: pretty;
+}
+.leasing-box-yellow { background: var(--pastel-yellow-light); }
+.leasing-box-blue { background: var(--pastel-blue-light); }
+.leasing-box-green { background: var(--pastel-green-light); }
+
+/* Bénéficiaires */
+.leasing-cond-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.leasing-cond-card {
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.leasing-cond-card-blue { background: var(--pastel-blue-light); }
+.leasing-cond-card-green { background: var(--pastel-green-light); }
+.leasing-cond-num {
+  width: 36px; height: 36px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-family: 'Schibsted Grotesk'; font-weight: 800; font-size: 16px;
+}
+.leasing-cond-card-blue .leasing-cond-num { background: var(--pastel-blue); }
+.leasing-cond-card-green .leasing-cond-num { background: var(--pastel-green); }
+.leasing-cond-card h3 { font-weight: 700; font-size: 19px; margin: 0; }
+.leasing-cond-card p { font-size: 15px; line-height: 1.6; color: var(--navy-light); margin: 0; }
+.leasing-cond-card ul { margin: 0; padding-left: 18px; font-size: 15px; line-height: 1.6; color: var(--navy-light); display: grid; gap: 4px; }
+.leasing-cond-card a { font-size: 14px; font-weight: 600; color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+
+.leasing-example {
+  background: var(--bg-gray);
+  border-radius: 16px;
+  padding: 20px 22px;
+  margin-bottom: 14px;
+}
+.leasing-example-label {
+  font-size: 13px; font-weight: 600; color: var(--navy-muted);
+  text-transform: uppercase; letter-spacing: .05em; margin-bottom: 12px;
+}
+.leasing-example p { font-size: 16px; line-height: 1.6; margin: 0 0 14px; text-wrap: pretty; }
+.leasing-example-calc {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  font-family: 'Schibsted Grotesk'; font-weight: 700; font-size: 18px;
+}
+.leasing-example-calc .chip { background: #FFFFFF; border-radius: 10px; padding: 8px 14px; }
+.leasing-example-calc .chip-result { background: var(--pastel-green); border-radius: 10px; padding: 8px 14px; }
+.leasing-example-calc .result-text { font-family: 'Public Sans'; font-weight: 600; font-size: 15px; color: var(--navy-light); }
+
+/* Contrat */
+.leasing-contract-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+.leasing-contract-card {
+  background: var(--bg-gray);
+  border-radius: 18px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.leasing-contract-card .stat {
+  font-family: 'Schibsted Grotesk'; font-weight: 800; font-size: 30px;
+  letter-spacing: -0.02em; line-height: 1;
+}
+.leasing-contract-card .stat .sub { font-size: 0.5em; font-weight: 600; letter-spacing: 0; }
+.leasing-contract-card p { font-size: 15px; line-height: 1.6; color: var(--navy-light); margin: 0; }
+
+.leasing-protections {
+  margin-top: 12px;
+  background: var(--navy);
+  color: #FFFFFF;
+  border-radius: 18px;
+  padding: 24px;
+}
+.leasing-protections h3 { font-weight: 700; font-size: 19px; margin: 0 0 14px; }
+.leasing-protections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--footer-text);
+}
+.leasing-protections-grid b { color: var(--pastel-yellow); display: block; margin-bottom: 4px; }
+
+/* Voitures */
+.leasing-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.leasing-tag { border-radius: 999px; padding: 6px 14px; font-size: 14px; font-weight: 600; }
+.leasing-tag-green { background: var(--pastel-green-light); }
+.leasing-tag-blue { background: var(--pastel-blue-light); }
+.leasing-tag-yellow { background: var(--pastel-yellow-light); }
+
+.leasing-table-wrap {
+  overflow-x: auto;
+  background: var(--bg-gray);
+  border-radius: 20px;
+  padding: 8px 20px;
+}
+.leasing-table { min-width: 360px; display: grid; }
+.leasing-table-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 160px;
+  gap: 16px;
+  padding: 14px 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy-muted);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  border-bottom: 1px solid var(--border);
+}
+.leasing-table-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 160px;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+}
+.leasing-table-row .model { font-weight: 600; font-size: 16px; }
+.leasing-table-row .price { font-family: 'Schibsted Grotesk'; font-weight: 800; font-size: 18px; }
+.leasing-table-row .price .per { font-size: 12px; font-weight: 600; color: var(--navy-muted); }
+.leasing-table-caption { font-size: 14px; line-height: 1.6; color: var(--navy-muted); margin: 14px 0 10px; }
+.leasing-link { font-size: 15px; font-weight: 600; color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Montant */
+.leasing-amount-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin-bottom: 22px;
+}
+.leasing-amount-card {
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+.leasing-amount-card .label { font-size: 14px; line-height: 1.45; color: var(--navy-light); }
+.leasing-amount-card .amount { font-family: 'Schibsted Grotesk'; font-weight: 800; font-size: 26px; letter-spacing: -0.02em; }
+.leasing-amount-card-gray { background: var(--bg-gray); }
+.leasing-amount-card-blue-light { background: var(--pastel-blue-light); }
+.leasing-amount-card-blue { background: var(--pastel-blue); }
+.leasing-amount-card-blue .label { color: var(--navy); }
+.leasing-amount-card-navy { background: var(--navy); color: #FFFFFF; }
+.leasing-amount-card-navy .label { color: var(--footer-text); }
+
+/* Comparaison */
+.leasing-compare-wrap {
+  overflow-x: auto;
+  border-radius: 20px;
+  background: var(--bg-gray);
+  padding: 8px 20px;
+  margin-bottom: 22px;
+}
+.leasing-compare-table { min-width: 600px; display: grid; }
+.leasing-compare-row {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+.leasing-compare-row.head { align-items: center; }
+.leasing-compare-row:not(.head) { align-items: start; }
+.leasing-compare-pill {
+  justify-self: start;
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-family: 'Schibsted Grotesk';
+  font-weight: 700;
+  font-size: 16px;
+}
+.leasing-compare-pill-green { background: var(--pastel-green); }
+.leasing-compare-pill-blue { background: var(--pastel-blue); }
+.leasing-compare-row .k {
+  font-size: 13px; font-weight: 600; color: var(--navy-muted);
+  text-transform: uppercase; letter-spacing: .04em; padding-top: 2px;
+}
+.leasing-compare-row .v { font-size: 15px; line-height: 1.5; }
+
+.leasing-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.leasing-choice-card {
+  border-radius: 18px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.leasing-choice-card-green { background: var(--pastel-green-light); }
+.leasing-choice-card-blue { background: var(--pastel-blue-light); }
+.leasing-choice-tag {
+  align-self: start;
+  border-radius: 999px;
+  padding: 3px 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.leasing-choice-card-green .leasing-choice-tag { background: var(--pastel-green); }
+.leasing-choice-card-blue .leasing-choice-tag { background: var(--pastel-blue); }
+.leasing-choice-card p { font-size: 15px; line-height: 1.6; margin: 0; text-wrap: pretty; }
+
+/* Démarches */
+.leasing-steps { list-style: none; margin: 0; padding: 0; display: grid; }
+.leasing-step { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 18px; }
+.leasing-step-rail { display: flex; flex-direction: column; align-items: center; }
+.leasing-step-num {
+  width: 44px; height: 44px; flex: none; border-radius: 50%;
+  display: grid; place-items: center;
+  font-family: 'Schibsted Grotesk'; font-weight: 800; font-size: 18px;
+}
+.leasing-step-line { flex: 1; width: 2px; background: var(--border); min-height: 20px; }
+.leasing-step p { margin: 0; padding: 9px 0 28px; font-size: 17px; line-height: 1.6; text-wrap: pretty; }
+
+@media (max-width: 640px) {
+  .leasing-table-head, .leasing-table-row { grid-template-columns: minmax(0, 1fr) 120px; }
+}

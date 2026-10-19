@@ -1,0 +1,316 @@
+/* Taxi électrique page — components not covered by the shared stylesheet */
+
+/* Hero */
+.taxi-hero { background: var(--bg-gray); padding: 28px 24px 64px; }
+
+.taxi-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  color: var(--navy-muted);
+  margin-bottom: 36px;
+}
+.taxi-breadcrumb a { color: var(--navy-muted); text-decoration: underline; text-underline-offset: 3px; }
+.taxi-breadcrumb .current { color: var(--navy); font-weight: 600; }
+
+.taxi-hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+  gap: 48px;
+  align-items: center;
+}
+
+.taxi-hero-grid h1 {
+  font-weight: 800;
+  font-size: clamp(34px, 4.2vw, 54px);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  margin: 0 0 22px;
+  text-wrap: balance;
+}
+
+.taxi-hero-grid > div:first-child p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--navy-light);
+  max-width: 600px;
+  margin: 0 0 30px;
+  text-wrap: pretty;
+}
+
+.taxi-hero-visual-col { display: flex; justify-content: center; align-items: center; }
+
+.taxi-hero-visual {
+  position: relative;
+  width: 100%;
+  max-width: 466px;
+  aspect-ratio: 1;
+}
+
+.taxi-blob-bg {
+  position: absolute;
+  left: 11%;
+  top: 13%;
+  width: 84%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #FFE1D3;
+}
+
+.taxi-photo-circle {
+  position: absolute;
+  left: 4%;
+  top: 4%;
+  width: 80%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #FFB8A0;
+}
+.taxi-photo-circle img { width: 100%; height: 100%; object-fit: cover; object-position: 68% 50%; }
+
+.taxi-dot-green {
+  position: absolute;
+  left: -1%;
+  top: -3%;
+  width: 8%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--pastel-green);
+  opacity: .85;
+}
+.taxi-dot-yellow {
+  position: absolute;
+  left: 83%;
+  top: 7%;
+  width: 13%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--pastel-yellow);
+  opacity: .9;
+}
+.taxi-dot-blue {
+  position: absolute;
+  left: 13%;
+  top: 1%;
+  width: 16%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--pastel-blue);
+  opacity: .85;
+}
+
+/* Layout: sticky TOC + article */
+.taxi-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 24px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 56px;
+  align-items: start;
+}
+
+.taxi-toc-aside { position: sticky; top: 96px; max-width: 260px; }
+@media (max-width: 900px) {
+  .taxi-toc-aside { position: static; max-width: none; }
+}
+.taxi-toc-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy-muted);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-bottom: 14px;
+}
+.taxi-toc-nav { display: flex; flex-direction: column; border-left: 2px solid var(--border); }
+.taxi-toc-nav a { padding: 8px 0 8px 16px; font-size: 15px; line-height: 1.35; color: var(--navy-light); }
+.taxi-toc-nav a:hover { color: var(--navy); }
+
+.taxi-article {
+  grid-column: span 3;
+  min-width: 0;
+  max-width: 820px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.taxi-article section { padding: 0; scroll-margin-top: 96px; }
+
+.taxi-article h2 {
+  font-weight: 700;
+  font-size: clamp(26px, 2.8vw, 34px);
+  letter-spacing: -0.02em;
+  margin: 0 0 18px;
+}
+.taxi-article p { font-size: 17px; line-height: 1.7; color: var(--navy-light); margin: 0 0 24px; text-wrap: pretty; }
+
+/* Pricing table (prime CEE) */
+.taxi-pricing-table {
+  display: grid;
+  gap: 10px;
+  background: var(--bg-gray);
+  border-radius: 20px;
+  padding: 12px;
+  margin-bottom: 14px;
+}
+.taxi-pricing-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr));
+  gap: 6px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 6px;
+}
+.taxi-pricing-cell {
+  padding: 14px 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.taxi-pricing-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--navy-muted);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+.taxi-pricing-label a { color: inherit; text-decoration: underline dotted; text-underline-offset: 3px; }
+.taxi-pricing-value {
+  font-family: 'Schibsted Grotesk';
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+.taxi-pricing-cell.is-situation .taxi-pricing-value {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+.taxi-pricing-cell.is-highlight { background: var(--pastel-blue); }
+.taxi-pricing-cell.is-highlight .taxi-pricing-label { color: var(--navy); }
+.taxi-pricing-cell.is-highlight .taxi-pricing-value { font-size: 26px; }
+.taxi-pricing-cell.is-none { background: var(--bg-gray); }
+.taxi-pricing-cell.is-none .taxi-pricing-label { color: #7A849A; }
+.taxi-pricing-cell.is-none .taxi-pricing-value { font-weight: 700; font-size: 18px; color: var(--navy-light); }
+
+.taxi-pricing-foot { font-size: 14px; line-height: 1.6; color: var(--navy-light); margin: 0 0 10px; text-wrap: pretty; }
+
+.taxi-eco-note {
+  scroll-margin-top: 110px;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 22px;
+  padding: 12px 16px;
+  background: var(--pastel-green-light);
+  border-radius: 12px;
+  text-wrap: pretty;
+}
+.taxi-eco-note a { font-weight: 600; color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Artisan / société offer cards */
+.taxi-offer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 14px; }
+.taxi-offer-card {
+  border-radius: 18px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.taxi-offer-card.is-blue { background: var(--pastel-blue-light); }
+.taxi-offer-card.is-gray { background: var(--bg-gray); }
+.taxi-offer-card p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--navy-light); text-wrap: pretty; }
+.taxi-offer-card .btn { align-self: start; margin-top: auto; }
+.taxi-badge-gray { background: #E3E7EF; }
+
+/* Conditions cards */
+.taxi-cond-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 14px; margin-bottom: 14px; }
+.taxi-cond-card {
+  border-radius: 18px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.taxi-cond-card.is-blue { background: var(--pastel-blue-light); }
+.taxi-cond-card.is-green { background: var(--pastel-green-light); }
+
+.taxi-checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.taxi-check-item { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; font-size: 15px; line-height: 1.55; }
+.taxi-check-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 1px;
+}
+.taxi-check-item a { color: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Dates box */
+.taxi-dates-box { background: var(--pastel-yellow-light); border-radius: 18px; padding: 22px; }
+.taxi-dates-box .badge { margin-bottom: 16px; }
+.taxi-dates-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 10px; margin-bottom: 14px; }
+.taxi-date-card { background: #FFFFFF; border-radius: 12px; padding: 14px; }
+.taxi-date-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--navy-muted);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  margin-bottom: 4px;
+}
+.taxi-date-card b { font-family: 'Schibsted Grotesk'; font-size: 16px; }
+.taxi-dates-box p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--navy); text-wrap: pretty; }
+
+/* Aide locale banner */
+.taxi-locale-banner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+  background: var(--bg-gray);
+  border-radius: 22px;
+  padding: clamp(22px, 3.5vw, 36px);
+}
+.taxi-locale-banner h2 { margin: 0 0 14px; }
+.taxi-locale-banner p { margin: 0 0 18px; font-size: 16px; line-height: 1.65; color: var(--navy-light); text-wrap: pretty; }
+.taxi-locale-links { display: flex; flex-wrap: wrap; gap: 10px 24px; }
+.taxi-locale-links a { font-weight: 600; font-size: 15px; color: var(--blue); }
+.taxi-locale-banner img { width: clamp(110px, 16vw, 170px); height: auto; }
+
+/* Démarches stepper */
+.taxi-stepper { list-style: none; margin: 0 0 8px; padding: 0; display: grid; }
+.taxi-step { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 18px; }
+.taxi-step-rail { display: flex; flex-direction: column; align-items: center; }
+.taxi-step-circle {
+  width: 44px; height: 44px; flex: none; border-radius: 50%; display: grid; place-items: center;
+  font-family: 'Schibsted Grotesk'; font-weight: 800; font-size: 18px;
+}
+.taxi-step-circle.is-s1 { background: var(--pastel-blue); }
+.taxi-step-circle.is-s2 { background: var(--pastel-green); }
+.taxi-step-circle.is-s3 { background: var(--pastel-yellow); }
+.taxi-step-circle.is-s4 { background: #FFB8A0; }
+.taxi-step-circle.is-s5 { background: #D9CCFF; }
+.taxi-step-circle.is-s6 { background: var(--pastel-blue); }
+.taxi-step-circle.is-s7 { background: var(--pastel-green); }
+.taxi-step-line { flex: 1; width: 2px; background: var(--border); min-height: 20px; }
+.taxi-step-line.is-hidden { opacity: 0; }
+.taxi-step-body { margin: 0; padding: 9px 0 28px; font-size: 17px; line-height: 1.6; text-wrap: pretty; }
+
+@media (max-width: 640px) {
+  .taxi-hero-visual { max-width: 320px; }
+}

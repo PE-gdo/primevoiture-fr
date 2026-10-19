@@ -1,0 +1,115 @@
+/* Page-specific styles: Mentions légales (legal/text content + inline cookie manager) */
+
+.legal-hero {
+  background: var(--bg-gray);
+  padding: 28px 24px 48px;
+}
+
+.legal-hero-inner {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.legal-breadcrumb {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  color: var(--navy-muted);
+  margin-bottom: 28px;
+}
+.legal-breadcrumb a {
+  color: var(--navy-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.legal-breadcrumb .current {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.legal-hero h1 {
+  font-weight: 800;
+  font-size: clamp(34px, 4.2vw, 48px);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+}
+
+.legal-article {
+  max-width: 868px;
+  margin: 0 auto;
+  padding: 24px 24px 72px;
+}
+
+.legal-section {
+  scroll-margin-top: 96px;
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+}
+
+.legal-section h2 {
+  font-weight: 700;
+  font-size: clamp(22px, 2.4vw, 26px);
+  letter-spacing: -0.015em;
+  margin: 0 0 14px;
+}
+
+.legal-section p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--navy-light);
+  margin: 0 0 12px;
+  text-wrap: pretty;
+}
+
+.legal-section p a {
+  font-weight: 600;
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.legal-box {
+  background: var(--bg-gray);
+  border-radius: 16px;
+  padding: 20px 22px;
+  margin-bottom: 14px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--navy);
+  text-wrap: pretty;
+}
+.legal-box b {
+  font-family: 'Schibsted Grotesk';
+  font-size: 18px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.legal-updated {
+  font-size: 14px;
+  color: var(--navy-muted);
+  margin: 8px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+/* Inline "Gérer les cookies" manager (always visible, separate from the floating banner) */
+.legal-cookie-manager {
+  display: grid;
+  gap: 8px;
+  margin: 4px 0 18px;
+}
+
+.legal-cookie-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.legal-cookie-status {
+  font-size: 14px;
+  color: var(--navy-muted);
+}
