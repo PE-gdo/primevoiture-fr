@@ -355,5 +355,7 @@
 .leasing-step p { margin: 0; padding: 9px 0 28px; font-size: 17px; line-height: 1.6; text-wrap: pretty; }
 
 @media (max-width: 640px) {
-  .leasing-table-head, .leasing-table-row { grid-template-columns: minmax(0, 1fr) 120px; }
+  .leasing-table { min-width: 0; }
+  .leasing-table-head, .leasing-table-row { grid-template-columns: minmax(0, 1fr) 100px; gap: 10px; }
+  .leasing-table-wrap { padding: 8px 14px; }
 }
