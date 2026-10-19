@@ -174,7 +174,7 @@
 .al-table-caption { font-size: 14px; line-height: 1.6; color: var(--navy-muted); margin: 14px 0 0; }
 
 /* Per-collectivity fiches */
-.al-fiches { display: grid; gap: 20px; }
+.al-fiches { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
 .al-fiche { scroll-margin-top: 96px; border-radius: 22px; padding: clamp(22px, 3vw, 32px); }
 .al-fiche-blue { background: var(--pastel-blue-light); }
 .al-fiche-orange { background: var(--pastel-orange-light); }
@@ -273,4 +273,9 @@
 @media (max-width: 900px) {
   .al-layout { grid-template-columns: 1fr; }
   .al-sidebar { position: static; max-width: none; margin-bottom: 8px; }
+}
+
+@media (max-width: 640px) {
+  .al-fiche-line { grid-template-columns: 1fr; gap: 4px; }
+  .al-fiche-v { grid-column: 1; }
 }
