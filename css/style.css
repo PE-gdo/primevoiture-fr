@@ -194,7 +194,6 @@ img { display: block; max-width: 100%; }
   gap: 6px;
   background: none;
   border: none;
-  font: inherit;
   cursor: pointer;
   padding: 0;
 }
