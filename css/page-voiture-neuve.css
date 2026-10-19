@@ -569,4 +569,14 @@
 
 @media (max-width: 640px) {
   .vn-layout { padding: 48px 24px 24px; }
+
+  .vn-locale-box {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+  .vn-locale-box img {
+    order: -1;
+    width: min(200px, 55%);
+  }
 }
