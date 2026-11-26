@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /primevoiture-mentions-legales
 Disallow: /primevoiture-mentions-legales.html
 
 Sitemap: https://primevoiture.fr/sitemap.xml
